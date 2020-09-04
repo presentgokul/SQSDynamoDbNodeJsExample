@@ -1,14 +1,14 @@
 var AWS = require("aws-sdk");
 AWS.config = new AWS.Config();
- AWS.config.accessKeyId = "AKIA2ML7HMCXFDKAPDYP";
- AWS.config.secretAccessKey = "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";
+ AWS.config.accessKeyId = "AKXXXXXXXXXXXXXXXXX";
+ AWS.config.secretAccessKey = "yzOYYYYYYYYYYYYYYYYYYYF";
  AWS.config.region ="eu-west-1";
  
 var dynamodb = new AWS.DynamoDB.DocumentClient();
 
 var sqs = new AWS.SQS();
 var sqsParams = {
-    QueueUrl: 'https://sqs.eu-west-1.amazonaws.com/713768263854/voyager-daily-events-queue',
+    QueueUrl: 'https://sqs.eu-west-1.amazonaws.com/12345689/presentgokul',
     VisibilityTimeout: '10',
     WaitTimeSeconds: '10'
 };
@@ -42,7 +42,7 @@ let insertItem = function(params,value){
     myPromise.then((resolvedValue) => {
         console.log(resolvedValue);
         var deleteMsgParam = {
-            QueueUrl: 'https://sqs.eu-west-1.amazonaws.com/713768263854/voyager-daily-events-queue',
+            QueueUrl: 'https://sqs.eu-west-1.amazonaws.com/12345689/presentgokul',
             ReceiptHandle:  value.ReceiptHandle 
           };
           sqs.deleteMessage(deleteMsgParam, function(err, data) {
