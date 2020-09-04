@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SQS DynamoDB Sample</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+
+<div class="container">
+  <h2>Recieve Messages</h2>
+  
+  <div class="form-group">
+    <label for="freqId">Enter Msg To Be Retrived </label>
+    <input type="freq" class="form-control" id="freqId" aria-describedby="emailHelp" placeholder="1">
+  </div>
+  <button  id='recievemsg' type="button" class="btn btn-primary">Read and Purge Messages</button>
+
+ <h2>Send Messages To SQS</h2>
+ <form id="frmSend">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="emailID" aria-describedby="emailHelp" placeholder="Enter email">
+
+  </div>
+  <div class="form-group">
+    <label for="exampleInputSiteId">Site Id</label>
+    <input type="siteid" class="form-control" id="siteID" placeholder="Enter site id">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputLastEvent">Last Event</label>
+    <input type="lastevent" class="form-control" id="lastEvent" placeholder="Enter Last Event">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEventType">Event Type</label>
+    <input type="eventType" class="form-control" id="eventType" placeholder="Enter Event Type">
+  </div>
+</form>
+  <button  id='sendmsg' type="button" class="btn btn-primary">Send Messages</button>
+
+</div>
+<script type="module" src="bundle.js"></script>
+</body>
+</html>
