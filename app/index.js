@@ -37,7 +37,7 @@ var uuid = require('uuid-random');
     let sendMessage = function(json) { 
         console.log('sendMessage');
         var sqsSendParams = {
-            QueueUrl: 'https://sqs.eu-west-1.amazonaws.com/713768263854/voyager-daily-gokul',
+            QueueUrl: 'https://sqs.eu-west-1.amazonaws.com/12345689/presentgokul',
             MessageAttributes:{
                 "Title":{
                     DataType:"String",
